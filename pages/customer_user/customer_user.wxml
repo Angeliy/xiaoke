@@ -1,0 +1,117 @@
+<block wx:if="{{ hasdata }}">
+  <view class='container'>
+    <view class='content'>
+      <view class="user">
+        <view class="user_a">
+          <image src="{{userinfo.head}}"></image>
+        </view>
+        <view class="user_a">
+          <text>{{userinfo.nickName}}</text>
+        </view>
+      </view>
+    </view>
+    <view class='content'>
+      <view class='list'>
+        <view bindtap="tiaozhuan" data-path="../customer_discount/customer_discount" class="tor" hover-class="none">
+          <view>
+            <image src="../../image/lin.png"></image>
+          </view>
+          <view class="weui-cell__bd">
+            <view>我的消息</view>
+          </view>
+          <view>
+            <text style='color:red;'>{{nums.messageNum}}条</text>
+          </view>
+          <view class="weui-cell__ft_in-access"></view>
+        </view>
+
+        <view bindtap="tiaozhuan" data-path="../customer_line/customer_line" class="tor" hover-class="none">
+          <view>
+            <image src="../../image/order.jpg"></image>
+          </view>
+          <view class="weui-cell__bd">
+            <view>我的订单</view>
+          </view>
+          <view>
+            <text style='color:red;'>{{nums.orderNum}}单</text>
+          </view>
+          <view class="weui-cell__ft_in-access"></view>
+        </view>
+
+        <navigator url="../customer_purchase/customer_purchase" class="tor" hover-class="none">
+          <view>
+            <image src="../../image/order.jpg" />
+          </view>
+          <view class="weui-cell__bd">
+            <view>团购订单</view>
+          </view>
+          <view class="weui-cell__ft_in-access"></view>
+        </navigator>
+
+        <view bindtap="tiaozhuan" data-path="../customer_footprint/customer_footprint" class="tor" hover-class="none">
+          <view>
+            <image src="../../image/footprint.jpg"></image>
+          </view>
+          <view class="weui-cell__bd">
+            <view>我的足迹</view>
+          </view>
+          <view class="weui-cell__ft_in-access"></view>
+        </view>
+
+        <view bindtap="tiaozhuan" data-path="../store_reg/store_reg" class="tor" hover-class="none">
+          <view>
+            <image src="../../image/shopowner.jpg"></image>
+          </view>
+          <view class="weui-cell__bd">
+            <view>店主注册</view>
+          </view>
+          <view class="weui-cell__ft_in-access"></view>
+        </view>
+
+        <view bindtap="tiaozhuan" data-path="../customer_reg/customer_reg" class="tor" hover-class="none">
+          <view>
+            <image src="../../image/beauty.png"></image>
+          </view>
+          <view class="weui-cell__bd">
+            <view>员工注册</view>
+          </view>
+          <view class="weui-cell__ft_in-access"></view>
+        </view>
+      </view>
+    </view>
+
+    <view class='content'>
+      <navigator url="../signin/signin" class="tor" hover-class="none">
+        <view>
+          <image src="../../image/tab.jpg"></image>
+        </view>
+        <view class="weui-cell__bd">
+          <view>登录账号切换</view>
+        </view>
+        <view class="weui-cell__ft_in-access"></view>
+      </navigator>
+    </view>
+
+    <view class='content'>
+      <navigator url="../contacks/contacks" class="tor" hover-class="none">
+        <view>
+          <image src="../../image/set.jpg"></image>
+        </view>
+        <view class="weui-cell__bd">
+          <view>联系我们</view>
+        </view>
+        <view class="weui-cell__ft_in-access"></view>
+      </navigator>
+    </view>
+  </view>
+
+  <!-- <view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">
+    <view class="drawer_title">部分功能需要获取您的公开信息，请点击授权</view>
+    <view class="drawer_content">
+      <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" style='background:#00c355; color:#fff;width:95%'>授权</button>
+      <button bindtap='bindGetUserInfo' style='width:95%; margin-top: 10px'>取消</button>
+    </view>
+  </view> -->
+</block>
+<import src="../template.wxml" />
+<template is="footer_tmp" data="{{route : 'geren'}}" />

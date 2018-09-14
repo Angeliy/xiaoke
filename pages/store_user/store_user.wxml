@@ -1,0 +1,139 @@
+<view class='container'>
+
+  <view class='content'>
+    <view class="user">
+      <view class='user_a'>
+        <view class="">
+          <image src="{{list.head}}"></image>
+        </view>
+        <view class="user_a">
+          <text>{{list.name}}</text>
+        </view>
+      </view>
+      <view class='edit'>
+        <navigator url='../store_reg_udp/store_reg' hover-class="none">
+          <text>编辑资料</text>
+        </navigator>
+        <view class="weui-cell__ft_in-access"></view>
+      </view>
+    </view>
+  </view>
+
+  <view class='content'>
+    <view class='list'>
+      <navigator url='../qrcode/qrcode' class="tor" hover-class="none">
+        <view>
+          <image src="../../image/store.jpg" />
+        </view>
+        <view class="weui-cell__bd">
+          <view>本店二维码</view>
+        </view>
+        <view class='code'>
+          <image src='../../image/code.png'></image>
+        </view>
+        <view class="weui-cell__ft_in-access"></view>
+      </navigator>
+      <navigator url="../customer_discount/customer_discount" class="tor" hover-class="none">
+        <view>
+          <image src="../../image/lin.png" />
+        </view>
+        <view class="weui-cell__bd">
+          <view>我的消息</view>
+        </view>
+        <view>
+          <text style='color:red;'>{{list.messageNum}}条</text>
+        </view>
+        <view class="weui-cell__ft_in-access"></view>
+      </navigator>
+      <navigator url="../store_toker/store_toker" class="tor" hover-class="none">
+        <view>
+          <image src="../../image/ext.jpg" />
+        </view>
+        <view class="weui-cell__bd">
+          <view>拓客</view>
+        </view>
+        <view class="weui-cell__ft_in-access"></view>
+      </navigator>
+      <navigator url="../store_staff/store_staff" class="tor" hover-class="none">
+        <view>
+          <image src="../../image/uer.jpg" />
+        </view>
+        <view class="weui-cell__bd">
+          <view>我的员工</view>
+        </view>
+        <view>
+          <text>{{list.employeeNum}}名</text>
+        </view>
+        <view class="weui-cell__ft_in-access"></view>
+      </navigator>
+      <navigator url="../store_follow/store_follow" class="tor" hover-class="none">
+        <view>
+          <image src="../../image/store_my.jpg" />
+        </view>
+        <view class="weui-cell__bd">
+          <view>关注顾客</view>
+        </view>
+        <view>
+          <text>{{list.focusCustomerNum}}名</text>
+        </view>
+        <view class="weui-cell__ft_in-access"></view>
+      </navigator>
+      <navigator url="../store_line/store_line" class="tor" hover-class="none">
+        <view>
+          <image src="../../image/store_my_uer.jpg" />
+        </view>
+        <view class="weui-cell__bd">
+          <view>预约订单</view>
+        </view>
+        <view>
+          <text style='color:red;'>{{list.orderCustomerNum}}单</text>
+        </view>
+        <view class="weui-cell__ft_in-access"></view>
+      </navigator>
+      <navigator url="../store_project/store_project" class="tor" hover-class="none">
+        <view>
+          <image src="../../image/adm.jpg" />
+        </view>
+        <view class="weui-cell__bd">
+          <view>项目管理</view>
+        </view>
+        <view class="weui-cell__ft_in-access"></view>
+      </navigator>
+      <navigator url="../store_app/store_app" class="tor" hover-class="none">
+        <view>
+          <image src="../../image/app.jpg" />
+        </view>
+        <view class="weui-cell__bd">
+          <view>我的应用</view>
+        </view>
+        <view class="weui-cell__ft_in-access"></view>
+      </navigator>
+    </view>
+  </view>
+
+  <view class='content'>
+    <navigator url="../signin/signin" class="tor" hover-class="none">
+      <view>
+        <image src="../../image/tab.jpg" />
+      </view>
+      <view class="weui-cell__bd">
+        <view>登录账号切换</view>
+      </view>
+      <view class="weui-cell__ft_in-access"></view>
+    </navigator>
+  </view>
+
+  <view class='content contact'>
+    <navigator url="../contacks/contacks" class="tor" hover-class="none">
+      <view>
+        <image src="../../image/set.jpg" />
+      </view>
+      <view class="weui-cell__bd">
+        <view>联系我们</view>
+      </view>
+      <view class="weui-cell__ft_in-access"></view>
+    </navigator>
+  </view>
+</view>
+<import src="../template.wxml"/>
+<template is="footer_tmp" data="{{route : 'geren'}}"/>

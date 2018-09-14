@@ -1,0 +1,49 @@
+<view class='mainContainer'>
+  <!-- 评价标题 -->
+  <view class='appContainer,distance'>
+    <view class='appraiseAll,titleStyle'>全部（980） </view>
+    <view class='well,titleStyle'>好评（900）</view>
+    <view class='bad,titleStyle'>差评（8）</view>
+  </view>
+  <!-- 评价详情信息 -->
+  <view class='list'>
+    <view class='appraiseItem,distance'>
+      <view class='itemLeft'>
+        <view class='itemPerson'>
+          <view class='imgCon'>
+            <image class='image1' src='/image/my.png'></image>
+            <text class='itemTitle'>最近</text>
+          </view>
+          <view class='itemDate'>2018-09-14</view>
+        </view>
+        <image class='image2' src='/image/use_sc2.png'></image>
+        <text class='shopMessage'>信息商品好评信信息商品好评信信息商品好评信信息商品好评信信息商品好评信信息商品好评信</text>
+        <text class='itemType'>项目: <text class='kind'>衣服4斤1瓶</text> </text>
+      </view>
+
+    </view>
+
+     <view class='appraiseItem,distance'>
+      <view class='itemLeft'>
+        <view class='itemPerson'>
+          <view class='imgCon'>
+            <image class='image1' src='/image/my.png'></image>
+            <text class='itemTitle'>最近</text>
+          </view>
+          <view class='itemDate'>2018-09-14</view>
+        </view>
+        <image class='image2' src='/image/use_sc2.png'></image>
+        <text class='shopMessage'>信息商品好评信信息商品好评信信息商品好评信信息商品好评信信息商品好评信信息商品好评信</text>
+        <text class='itemType'>项目: <text class='kind'>衣服4斤1瓶</text> </text>
+      </view>
+
+    </view>
+  </view>
+
+
+
+
+
+
+
+</view>

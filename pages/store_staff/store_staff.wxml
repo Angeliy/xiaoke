@@ -1,0 +1,53 @@
+<view class='container'>
+
+  <view class='hua'>
+    左滑删除员工!
+  </view>
+
+  <scroll-view bindscrolltolower="lower" scroll-y="true" style="height: 1050rpx;">
+    <view class="content_box" wx:for="{{arr}}" wx:key="{{key}}">
+      <view class="view_ce">
+        <view style="{{item.txtStyle}}" class="content_box_center" bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" data-index="{{index}}">
+          <view class="ProductIco_box">
+            <view class='num'>
+              <text>{{index+1}}</text>
+            </view>
+            <view class="til">
+              <text>{{item.user.name}} / {{item.user.position}}</text>
+              <text>{{item.user.phone}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="delete_btn" bindtap='delete_btn' data-index="{{item.user.id}}">删除</view>
+    </view>
+  </scroll-view>
+  <view class="trip-bottom">
+    <button type='button' bindtap='uploader' style='border:0' bindtap="powerDrawer" data-statu="open">添加员工+</button>
+  </view>
+
+</view>
+
+<!-- 添加员工弹框 -->
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">
+  <view class="drawer_title">添加员工</view>
+  <view style='color:red;font-size: 30rpx'>提示：把店铺分享给员工注册后才可以添加</view>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="drawer_content">
+      <view class='drawer_reward'>
+        <view class='box'>
+          <view class='cher'>
+            <view class="cell">
+              手机号：
+              <input class="weui-input" name="employeePhone" value="{{inputTxt}}" placeholder="请输入电话" />
+            </view>
+          </view>
+        </view>
+        <button size='mini' formType="submit" bindtap='onClickAward'>确认添加</button>
+      </view>
+    </view>
+  </form>
+  <view class="btn_ok" bindtap="powerDrawer" data-statu="close">
+    <image src='../../image/cha.png'></image>
+  </view>
+</view>

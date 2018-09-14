@@ -1,0 +1,59 @@
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class='container'>
+    <view class='content'>
+      <view>
+        <text>行业：{{arr.business}}</text>
+      </view>
+      <view class="cell">
+        <input class="weui-input" name="liebie" value="{{inputTxt}}" placeholder="烫发／染发／生日蛋糕／寿司" />
+      </view>
+      <view class='btn'>
+        <button type='button' formType="submit">添加</button>
+      </view>
+    </view>
+
+    <view class='hua'>
+      左滑删除项目!
+    </view>
+
+    <scroll-view bindscrolltolower="lower" scroll-y="true" style="height: 1050rpx;">
+      <view class="content_box" wx:for="{{arr.projects}}" wx:key="{{key}}">
+        <view class="view_ce">
+          <block wx:if="{{ clicknum == index }}">
+            <view style="{{clickstyle}}" class="content_box_center" bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" data-index="{{index}}">
+              <view class="ProductIco_box">
+                <view class='num'>
+                  <text>{{index+1}}</text>
+                </view>
+                <view class="til">
+                  <text>{{item.projectName}}</text>
+                </view>
+              </view>
+            </view>
+          </block>
+          <block wx:else>
+            <view class="content_box_center" bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" data-index="{{index}}">
+              <view class="ProductIco_box">
+                <view class='num'>
+                  <text>{{index+1}}</text>
+                </view>
+                <view class="til">
+                  <text>{{item.projectName}}</text>
+                </view>
+              </view>
+            </view>
+          </block>
+        </view>
+        <view class="delete_btn" bindtap='delete_btn' data-index="{{item.id}}">删除</view>
+      </view>
+    </scroll-view>
+  </view>
+</form>
+
+<!--弹窗-->
+<view class="modal-dialog" wx:if="{{shiabaitips}}">
+  <view class="modal-title">项目名称不能为空</view>
+  <view class="modal-footer">
+    <view class="btn-confirm" bindtap="hideshibai" data-status="confirm">确定</view>
+  </view>
+</view>

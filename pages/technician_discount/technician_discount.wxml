@@ -1,0 +1,58 @@
+<scroll-view scroll-y="true" style="height: 95vh; width: 750rpx;" bindscrolltolower="jiazaigengduo">
+  <view class='container'>
+    <block wx:for="{{msglist}}" wx:key="{{key}}">
+      <view class='box'>
+        <view class='title'>
+          <text>{{item.title}} {{item.gmtCreate}}</text>
+          <text bindtap='deletemesg' data-text="{{item.id}}">删除</text>
+        </view>
+        <view class='cont'>
+          {{item.context}}
+        </view>
+      <!-- <view class='bottom'>
+        <text>预约服务：洗剪吹,烫发,染发</text>
+        <text>预约店铺：名剑天下</text>
+        <text>预约技师：张三</text>
+        <text>预约时间：2018/09/26 14：30</text>
+      </view> -->
+    </view>
+  </block>
+</view>
+</scroll-view>
+
+
+<!-- <view class='container'>
+
+  <view class='box'>
+    <view class='title'>
+      <text>预约成功 消息时间2018/09/26 14：30</text>
+      <text>删除</text>
+    </view>
+    <view class='cont'>
+      顾客名字,已预约成功。
+    </view>
+    <view class='bottom'>
+      <text>预约服务：洗剪吹,烫发,染发</text>
+      <text>预约店铺：名剑天下</text>
+      <text>预约技师：张三</text>
+      <text>预约时间：2018/09/26 14：30</text>
+    </view>
+  </view>
+
+  <view class='box'>
+    <view class='title'>
+      <text>取消预约</text>
+      <text>删除</text>
+    </view>
+    <view class='cont'>
+      顾客名字,已预约成功
+    </view>
+    <view class='bottom'>
+      <text>预约服务：洗剪吹,烫发,染发</text>
+      <text>预约店铺：名剑天下</text>
+      <text>预约技师：张三</text>
+      <text>预约时间：2018/09/26 14：30</text>
+    </view>
+  </view>
+
+</view> -->

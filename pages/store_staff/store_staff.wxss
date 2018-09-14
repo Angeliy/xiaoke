@@ -1,0 +1,156 @@
+page {
+  background: #f2f4f6;
+  height: 100%;
+}
+
+.hua{
+  color: red;
+  font-size: 35rpx;
+  margin: 10rpx 30rpx;
+}
+
+.content_box {
+  position: relative;
+}
+
+.view_ce {
+  width: 100%;
+  height: 80rpx;
+  position: relative;
+  padding-top: 20rpx;
+  padding-bottom: 30rpx;
+}
+
+.content_box_center {
+  width: 100%;
+  padding: 30rpx;
+  height: 120rpx;
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+.ProductIco_box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.delete_btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 32rpx;
+  background: #ff3b30;
+  width: 134rpx;
+  height: 120rpx;
+  text-align: center;
+  line-height: 120rpx;
+  color: #fff;
+  z-index: 1;
+}
+
+.num {
+  width: 78rpx;
+  height: 78rpx;
+  background: #ffc824;
+  text-align: center;
+  line-height: 75rpx;
+  margin-right: 20rpx;
+}
+
+.til {
+  flex: 2.5;
+}
+
+.til text {
+  display: block;
+  font-size: 30rpx;
+  color: #333;
+}
+
+.til text:nth-child(2) {
+  font-size: 22rpx;
+  display: block;
+  color: #666;
+}
+
+.trip-bottom button {
+  position: fixed;
+  bottom: 0;
+  width: 260rpx;
+  height: 90rpx;
+  line-height: 88rpx;
+  border: 1px solid #ffc824;
+  background: #ffc824;
+  border-radius: 50rpx;
+  z-index: 999;
+  color: #fff;
+  right: 0;
+  font-size: 35rpx;
+  margin: 50rpx;
+  box-shadow: 1px 1px 10px #666;
+}
+
+/* 弹窗 */
+
+.drawer_box {
+  width: 480rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 16%;
+  left: 15%;
+  z-index: 1001;
+  background: #eee;
+  border-radius: 3px;
+  padding: 0 30rpx;
+}
+
+.drawer_title {
+  padding: 15px;
+  text-align: center;
+}
+
+.btn_ok image {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.drawer_content {
+  height: 280rpx;
+}
+
+.drawer_reward {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20rpx;
+}
+
+.btn_ok {
+  text-align: center;
+}
+
+.btn_ok image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.drawer_reward button {
+  color: #fff;
+  background: #ffc824;
+  width: 250rpx;
+  border-radius: 10rpx;
+}
+
+.box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30rpx;
+}
+
+.cell {
+  font-size: 28rpx;
+  color: #333;
+}

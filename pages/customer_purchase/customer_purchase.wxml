@@ -1,0 +1,99 @@
+<view class="container">
+  <view class="swiper-tab">
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">排队订单</view>
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">完成订单</view>
+    <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">取消订单</view>
+    <view class="swiper-tab-list {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">历史订单</view>
+  </view>
+
+  <swiper current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight}}rpx">
+
+    <!-- 排队订单 -->
+    <swiper-item>
+      <scroll-view scroll-y="true" class="scoll-h">
+        <view class='line' wx:for="{{items}}">
+
+          <view>
+            <image src='../../image/dian.png'></image>
+          </view>
+          <view class='gg'>
+            <view class='p1'>
+              秋季冬装秋秋季冬装秋秋季冬装秋秋季冬装秋
+            </view>
+            <view class='cc'>
+              <text class='p2'>￥69</text>
+              <view class='p3'>团购</view>
+              <text class='p5'>2018/09/12 13:22截止</text>
+            </view>
+            <view class='cc'>
+              <text class='p4'>店铺: 名剑天下</text>
+              <text class='p6'>2018/09/12 13:22</text>
+            </view>
+            <view class='btn'></view>
+            <button type="default" bindtap='openConfirm'>取消订单</button>
+          </view>
+
+        </view>
+      </scroll-view>
+    </swiper-item>
+
+    <!-- 完成订单 -->
+    <swiper-item>
+      <scroll-view scroll-y="true" class="scoll-h">
+        <view class='line' wx:for="{{items}}">
+          <view class='num'>
+            <text>{{index+1}}</text>
+          </view>
+          <view class='til'>
+            <text>{{item.message}}</text>
+            <text>{{item.topic}}</text>
+          </view>
+          <view class='til tl'>
+            <text>{{item.til}}</text>
+            <text>{{item.tm}}</text>
+          </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+
+
+    <!-- 取消订单 -->
+    <swiper-item>
+      <scroll-view scroll-y="true" class="scoll-h">
+        <view class='line' wx:for="{{items}}">
+          <view class='num'>
+            <text>{{index+1}}</text>
+          </view>
+          <view class='til'>
+            <text>{{item.message}}</text>
+            <text>{{item.topic}}</text>
+          </view>
+          <view class='til tl'>
+            <text>{{item.til}}</text>
+            <text>{{item.tm}}</text>
+          </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+
+    <!-- 历史订单 -->
+    <swiper-item>
+      <scroll-view scroll-y="true" class="scoll-h">
+        <view class='line' wx:for="{{items}}">
+          <view class='num'>
+            <text>{{index+1}}</text>
+          </view>
+          <view class='til'>
+            <text>{{item.message}}</text>
+            <text>{{item.topic}}</text>
+          </view>
+          <view class='til tl'>
+            <text>{{item.til}}</text>
+            <text>{{item.tm}}</text>
+          </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+
+  </swiper>
+</view>

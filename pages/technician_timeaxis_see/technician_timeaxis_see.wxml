@@ -1,0 +1,21 @@
+<view class="trip">
+  <view class="trip-wps">
+    <view class="day-marker">
+      <text class="circle"></text>
+      <!-- <text>Day</text> -->
+    </view>
+    <view class="day">
+    
+      <view class="day-content">
+        <view class="waypoint">
+          <view class="photo-ctn">
+            <block wx:for='{{imagurl}}' wx:for-item="img">
+              <image src="{{img.url}}" bindtap='previewImg' data-text="{{index}}" data-index="{{img.id}}"></image>
+            </block>
+          </view>
+        </view>
+
+      </view>
+    </view>
+  </view>
+</view>

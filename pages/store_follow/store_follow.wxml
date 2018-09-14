@@ -1,0 +1,52 @@
+<view class='container'>
+  <view class="swiper-tab">
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">今日新增绑定顾客({{jintiannub}})人</view>
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">总绑定顾客({{zongnub}})人</view>
+  </view>
+
+  <swiper current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight}}rpx">
+    <!-- 总绑定 -->
+    <swiper-item>
+      <scroll-view scroll-y="true" class="scoll-h" bindscrolltolower="jiazaigengduo">
+        <view class='conter'>
+          <view class='line' id='{{index}}' wx:for="{{items1}}">
+            <view class='num'>
+              <text>{{index+1}}</text>
+            </view>
+            <view class='til'>
+              <text>{{item.customerName}}　　来源：{{item.source}}</text>
+              <text>{{item.gmtCreate}}</text>
+            </view>
+            <view class='til tl'>
+              <navigator url='../store_toker/store_toker' hover-class="none">
+                <image src="../../image/ext.jpg"></image>
+              </navigator>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+
+    <!-- 今日新增 -->
+    <swiper-item>
+      <scroll-view scroll-y="true" class="scoll-h" bindscrolltolower="jiazaigengduo">
+        <view class='conter'>
+          <view class='line' id='{{index}}' wx:for="{{items}}">
+            <view class='num'>
+              <text>{{index+1}}</text>
+            </view>
+            <view class='til'>
+              <text>{{item.customerName}}　　来源：{{item.source}}</text>
+              <text>{{item.gmtCreate}}</text>
+            </view>
+            <view class='til tl'>
+              <navigator url='../store_toker/store_toker' hover-class="none">
+                <image src="../../image/ext.jpg"></image>
+              </navigator>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+</view>

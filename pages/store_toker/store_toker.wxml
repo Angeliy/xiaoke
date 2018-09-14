@@ -1,0 +1,94 @@
+<view class='container'>
+  <view class='top'>
+    <view class='vip'>
+      <image src='../../image/vip.png'></image>
+    </view>
+    <block wx:if="{{ day == 0}}">
+      <view class='foz'>
+        <text>vip权限未开通</text>
+        <text>未开通</text>
+        <text>折扣劵促使绑定与关注的顾客到店消费请开通VIP</text>
+      </view>
+      <view class='openup'>
+        <button type='button' style="background-color: #00C853;" bindtap="powerDrawer" data-statu="open">立即开通</button>
+      </view>
+    </block>
+    <block wx:else>
+      <view class='foz'>
+        <text>vip到期时间还剩：{{day}}天</text>
+        <text>已开通</text>
+        <text>折扣劵促使绑定与关注的顾客到店消费请开通VIP</text>
+      </view>
+      <view class='openup'>
+        <button type='button' bindtap="powerDrawer" data-statu="open">已开通</button>
+      </view>
+    </block>
+  </view>
+  <view class='tuo'>
+    <text>设置拓客抵扣劵</text>
+  </view>
+  <form bindsubmit="tokeyouhui" bindreset="formReset">
+    <view class='contain'>
+      <view class='text'>
+        <text>—— 折扣人群 ——</text>
+      </view>
+      <view class="group-body">
+        <view class="filter-tags">
+          <text wx:for="{{filterdata.contain}}" wx:key="{{item.id}}" data-id="{{item.id}}" bindtap="chooseContain" class="{{filter.containid==item.id?'active':''}}">{{item.title}}</text>
+        </view>
+      </view>
+
+      <view class="title" style='border-top: 1px solid #eee;padding:10rpx 0 0 30rpx;'>消息编辑:</view>
+      <view class="cell">
+        <textarea wx:if="{{!showModalStatus}}" class="weui-textarea" placeholder="发送时带文字:XX店赠送的折扣劵请在本店主页查看。全体员工人员欢迎您的光临。" name="tokentips" style="height: 3.3em"></textarea>
+        <view class='text'>
+          <text>—— 设置类别抵扣额度 ——</text>
+        </view>
+        <view class='up'>
+          <view class='title'>
+            <view>
+              <text>行业:</text>
+            </view>
+          </view>
+          <block wx:for="{{ projects }}" wx:key="key">
+            <view class='service'>
+              <text>{{item.projectName}} </text> —
+              <input class="weui-input" value="{{item.money}}" name="{{item.projectID}}" placeholder="抵扣额度" />元
+            </view>
+          </block>
+        </view>
+        <view class='btn'>
+          <button type='button' formType="submit">确定</button>
+        </view>
+      </view>
+    </view>
+  </form>
+</view>
+
+<!-- VIP弹出框 -->
+<view animation="{{animationData}}" class="quanbutips" wx:if="{{showModalStatus}}">
+  <view class="drawer_box" bindtap="test()">
+    <view class="drawer_title">VIP开通</view>
+    <view class="drawer_content">
+      <form bindsubmit="formSubmit">
+        <view class='drawer_reward'>
+
+          <view class='box'>
+            <view class='cher'>
+              <radio-group class="radio-group" bindchange="radioChange" name="lxvip">
+                <label class="radio" wx:for="{{items}}">
+                  <radio value="{{item.name}}" checked="{{item.checked}}"></radio>
+                  <text>{{item.value}}</text>
+                </label>
+              </radio-group>
+            </view>
+          </view>
+          <button size='mini' formType="submit">确认开通</button>
+        </view>
+      </form>
+    </view>
+    <view class="btn_ok" bindtap="powerDrawer" data-statu="close">
+      <image src='../../image/cha.png'></image>
+    </view>
+  </view>
+</view>

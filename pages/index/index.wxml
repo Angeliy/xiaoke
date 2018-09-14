@@ -1,0 +1,132 @@
+<view class='container'>
+  <view class='content'>
+    <view class='title'>
+      <text>{{shopinfo.shopName}}</text>
+      <text>关注量：{{shopinfo.attentionNum}}次</text>
+    </view>
+    <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">
+      <block wx:for="{{shopinfo.shopBanners}}" wx:for-index="index">
+        <swiper-item>
+          <image src="{{shopinfo.shopBanners[index].url}}" class="slide-image" mode="aspectFill" />
+        </swiper-item>
+      </block>
+    </swiper>
+
+    <!-- 地址 -->
+    <view class="list">
+      <button bindtap='goToMap' class="weui-cell map" hover-class="none">
+        <view>
+          <image src="../../image/add.png" />
+        </view>
+        <view class="weui-cell__bd">
+          <view class="font" style='text-align:left;width:500rpx;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;'>{{shopinfo.address}}</view>
+        </view>
+        <view class="weui-cell__ft_in-access"></view>
+      </button>
+      <button bindtap='call' class="weui-cell map" hover-class="none">
+        <view>
+          <image src="../../image/phone.png" />
+        </view>
+        <view class="weui-cell__bd">
+          <view class="font">{{shopinfo.shopPhone}}</view>
+        </view>
+      </button>
+      <navigator url="" class="weui-cell" hover-class="none">
+        <view>
+          <image src="../../image/time.png" />
+        </view>
+        <view class="weui-cell__bd">
+          <view>营业时间：{{shopinfo.businessTime}}</view>
+        </view>
+      </navigator>
+    </view>
+
+    <!-- 团购 -->
+    <view class='dian_box'>
+      <image src='../../image/dian.png'></image>
+      <view class='gg'>
+        <text class='p1'>秋季冬装秋秋季冬装秋秋季冬装秋秋季冬装秋</text>
+        <view class='cc'>
+          <text class='p2'>￥69</text>
+          <view class='p3'>
+            团购
+          </view>
+          <button class='btn' bindtap='cod'>马上抢</button>
+        </view>
+        <text class='p4'>已团: 5人</text>
+      </view>
+    </view>
+
+
+  </view>
+
+
+
+  <!-- 发型师展示 -->
+  <view class='content'>
+    <view class='title'>
+      <text>团队成员</text>
+    </view>
+
+
+    <block wx:for="{{ userDTOS }}">
+      <view class='stylist'>
+        <view class='stylist_photo'>
+          <image src='{{item.head}}'></image>
+        </view>
+        <view class='stylist_text'>
+          <view>
+            <text class='p'>{{item.name}}</text>
+            <block wx:for="{{5}}">
+              <image src='../../image/use_sc2.png'></image>
+            </block>
+            <block wx:for="{{ 5 - 5 }}">
+              <image src='../../image/use_sc.png'></image>
+            </block>
+          </view>
+          <text>今日接单【{{item.todayOrder}}位】</text>
+          <text>已预约【{{item.alreadyOrder}}位】</text>
+          <block wx:if="{{ item.status == 1 }}">
+            <text>(可约)</text>
+          </block>
+          <block wx:else>
+            <text>(休息中)</text>
+          </block>
+        </view>
+        <view class='btn'>
+          <block wx:if="{{ item.status == 1 }}">
+            <button bindtap='make' data-id="{{item.userID}}">进入预约</button>
+          </block>
+          <block wx:else>
+            <button>休息中</button>
+          </block>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <block wx:for="{{ advertisings }}">
+    <view class='content advert' bindtap="guangGaoshow">
+      <image src='{{item.adImg}}'></image>
+      <view class='advert'></view>
+    </view>
+    <!-- <block wx:if="{{ item.adUrl != '' && guanggaoshow }}">
+      <web-view src="{{item.adUrl}}"></web-view>
+    </block> -->
+  </block>
+
+</view>
+<import src="../template.wxml" />
+<template is="footer_tmp" data="{{route : 'shouye'}}" />
+
+<!-- 获取用户信息的按钮授权 -->
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">
+  <view class='shou'>
+    <image src='../../image/shop.png'></image>
+  </view>
+  <view class="drawer_title">· 部分功能需要获取您的公开信息，请点击授权</view>
+  <view class="drawer_content">
+    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='shouquan'>授权</button>
+    <!-- <button bindtap='bindGetUserInfo' style='width:95%; margin-top: 10px'>取消</button> -->
+  </view>
+</view>

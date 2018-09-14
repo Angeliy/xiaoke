@@ -1,0 +1,50 @@
+<form bindsubmit="formSubmit">
+  <view class='conter'>
+    <view class="title">员工姓名(必填)</view>
+    <view class="cell">
+      <input class="weui-input" name="jsmingzi" placeholder="请输入姓名" />
+    </view>
+    <view class="title">职位(必填)</view>
+    <view class="cell">
+      <input class="weui-input" name="jszhiwei" placeholder="技能职位" />
+    </view>
+    <view class="title">店主手机号(必填)(请老板注册后才可以添加)</view>
+    <view class="cell">
+      <input class="weui-input" name="jsdzphone" placeholder="请输入绑定店主的手机号" />
+    </view>
+    <view class="title">手机账户(必填)</view>
+    <view class="cell">
+      <input class="weui-input" name="jszhanghao" placeholder="注册账户" />
+    </view>
+    <view class="title">密码(必填)</view>
+    <view class="cell">
+      <input class="weui-input" type="password" name="jsmima" placeholder="注册密码" />
+    </view>
+    <view class="title">从业年限</view>
+    <view class="cell">
+      <input type='digit' class="weui-input" name="jsnianfen" placeholder="年份" />
+    </view>
+    <view class="title">擅长</view>
+    <view class="cell">
+      <input class="weui-input" adjust-position="true" name="jsshangchang" placeholder="例：潮流短发，时尚接发，色彩精英" />
+    </view>
+    <view class="title" style="padding-bottom:15rpx">个人简介</view>
+    <view class="cell">
+      <textarea class="weui-textarea" adjust-position="true" name="jsjianjie" placeholder="请输入文本" style="height: 3.3em" />
+    </view>
+  </view>
+  <view class='up'>
+    <view class='btn'>
+      <button type='button' formType="submit">立即提交</button>
+    </view>
+  </view>
+</form>
+
+<!--弹窗-->
+<view class="modal-mask" bindtap="hideshibai" catchtouchmove="preventTouchMove" wx:if="{{shiabaitips}}"></view>
+<view class="modal-dialog" wx:if="{{shiabaitips}}">
+  <view class="modal-title">操作失败</view>
+  <view class="modal-footer">
+    <view class="btn-confirm" bindtap="hideshibai" data-status="confirm">确定</view>
+  </view>
+</view>

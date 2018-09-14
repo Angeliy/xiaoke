@@ -1,0 +1,40 @@
+page{
+  background: #f2f4f6;
+}
+
+.box{
+  border: 1px solid #eee;
+  background: #fff;
+  padding: 25rpx;
+  margin: 30rpx;
+  border-radius: 10rpx;
+}
+
+.title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10rpx;
+}
+.title text:nth-child(2){
+  font-size: 28rpx;
+  color: #666;
+  border-left: 1px solid #eee;
+  padding-left: 20rpx;
+}
+.cont{
+  padding-top: 10rpx;
+  font-size: 30rpx;
+  color: #333;
+}
+
+.bottom text{
+  display: block;
+  font-size: 28rpx;
+  color: #666;
+}
+.time {
+  margin-left: 40rpx;
+  font-size: 30rpx;
+}

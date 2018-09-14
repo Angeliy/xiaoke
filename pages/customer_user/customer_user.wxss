@@ -1,0 +1,133 @@
+page {
+  background: #f2f4f6;
+}
+
+.content {
+  background: #fff;
+  margin-bottom: 30rpx;
+}
+
+.content image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+  vertical-align: middle;
+}
+
+.list text {
+  font-size: 28rpx;
+  color: #666;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  padding: 30rpx;
+}
+
+.user_a image {
+  width: 130rpx;
+  height: 130rpx;
+}
+
+.user_a text {
+  display: block;
+  padding-left: 20rpx;
+}
+
+.tor {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20rpx 30rpx;
+  margin: 0 22rpx;
+}
+
+.list .tor:nth-child(1) {
+  border-bottom: 1px solid #eee;
+}
+
+.list .tor:nth-child(2) {
+  border-bottom: 1px solid #eee;
+}
+
+.list .tor:nth-child(3) {
+  border-bottom: 1px solid #eee;
+}
+
+.list .tor:nth-child(4) {
+  border-bottom: 1px solid #eee;
+}
+
+/**
+ * 授权提示
+ */
+.drawer_box {
+width: 650rpx;
+overflow: hidden;
+position: fixed;
+top: 50%;
+left: 0;
+z-index: 1001;
+background: #f8f8f8;
+margin: -150px 50rpx 0 50rpx;
+border-radius: 3px;
+}
+.drawer_title {
+font-size: 30rpx;
+color: #666;
+padding: 15px;
+border-bottom: 1px solid #e8e8ea;
+text-align: center;
+}
+
+/**
+ * 提示窗口
+ */
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9000;
+  color: #fff;
+}
+
+.modal-dialog {
+  padding-top: 50rpx;
+  width: 540rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  z-index: 9999;
+  background: #f9f9f9;
+  margin: -180rpx 105rpx;
+  border-radius: 36rpx;
+}
+
+.modal-title {
+  font-size: 36rpx;
+  color: #030303;
+  text-align: center;
+}
+
+.modal-footer {
+  margin-top: 50rpx;
+  display: flex;
+  flex-direction: row;
+  height: 86rpx;
+  border-top: 1px solid #dedede;
+  font-size: 34rpx;
+  line-height: 86rpx;
+}
+
+.btn-confirm {
+  width: 100%;
+  color: #ec5300;
+  text-align: center;
+}

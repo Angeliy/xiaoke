@@ -1,0 +1,5 @@
+<!--pages/text/text.wxml-->
+<text>pages/text/text.wxml</text>
+<view>{{classic.content}}</view>
+<view>{{classic.index}}</view>
+<view>3</view>

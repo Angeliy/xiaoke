@@ -1,0 +1,64 @@
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class='conter'>
+    <view class="title">技师姓名(必填)</view>
+    <view class="cell">
+      <input class="weui-input" name="name" value="{{info.name}}" placeholder="请输入姓名" />
+    </view>
+    <view class="title">职位(必填)</view>
+    <view class="cell">
+      <input class="weui-input" name="zhiwei" value="{{info.position}}" placeholder="技能职位" />
+    </view>
+    <view class="title">店主手机号(必填)</view>
+    <view class="cell">
+      <input class="weui-input" type='number' name="dzshouji" value="{{employerPhone}}" placeholder="请输入绑定店主的手机号" />
+    </view>
+    <view class="title">手机账户(必填)</view>
+    <view class="cell">
+      <input class="weui-input" type='number' name="phone" value="{{info.phone}}" placeholder="注册的账户" />
+    </view>
+    <view class="title">密码(必填)</view>
+    <view class="cell">
+      <input class="weui-input" type="password" name="mima" value="{{info.password}}" placeholder="注册的密码" />
+    </view>
+    <view class="title">从业年限</view>
+    <view class="cell">
+      <input class="weui-input" type='digit' name="nianfen" value="{{info.workingTime}}" placeholder="年份" />
+    </view>
+    <view class="title">擅长</view>
+    <view class="cell">
+      <input class="weui-input" adjust-position="true" name="shangchang" value="{{info.skills}}" placeholder="例：潮流短发，时尚接发，色彩精英" />
+    </view>
+    <view class="title" style="padding-bottom:15rpx">个人简介</view>
+    <view class="cell">
+      <textarea class="weui-textarea" adjust-position="true" name="jianjie" value="{{info.introduce}}" placeholder="请输入文本" style="height: 3.3em"></textarea>
+    </view>
+  </view>
+  <view class='up'>
+    <view>
+      <text>行业:{{business}}</text>
+      <text style='color:red;padding-left: 30rpx;'>请在下列框填写你服务范围的价格</text>
+    </view>
+    <view class='title_2'>
+
+      <!-- <view class="phone_one" bindtap="clickPerson">
+        <view class="phone_personal">{{firstPerson}}</view>
+        <image src='../../image/bot.png'></image>
+      </view>  -->
+      <view class="project">
+        <block wx:for="{{ projects }}" wx:key="key">
+          <view class='service'>
+            <text>{{item.project.projectName}} </text> —
+            <input class="weui-input" adjust-position="true" type='digit' value="{{item.projectPrice}}" name="{{item.project.id}}" placeholder="价格" />元
+          </view>
+        </block>
+      </view>
+
+    </view>
+
+    <view class='btn'>
+      <button type='button' formType="submit">立即提交</button>
+    </view>
+
+  </view>
+
+</form>

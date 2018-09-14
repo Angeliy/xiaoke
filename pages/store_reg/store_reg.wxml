@@ -1,0 +1,117 @@
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class='conter'>
+    <view class="title">店名(必填)</view>
+    <view class="cell">
+      <input class="weui-input" name="dianming" type="text" placeholder="请输入店名" />
+    </view>
+    <view bindtap="getLocation">
+      <view class="title">地址(选择位置)</view>
+      <view class="cell" style='padding:10rpx 0;'>
+        <text>{{duliweizhi}}</text>
+      </view>
+    </view>
+    <view class="title">行业(必填)</view>
+    <view class="cell">
+      <input class="weui-input" name="hangye" type="text" placeholder="主营行业" />
+    </view>
+    <view class="title">店铺电话(必填)</view>
+    <view class="cell">
+      <input class="weui-input" name="dianhua" type="number" placeholder="电话" />
+    </view>
+    <view class="title">手机账户(必填)</view>
+    <view class="cell">
+      <input class="weui-input" name="zhanghao" type="number" placeholder="注册账户" />
+    </view>
+    <view class="title">密码(必填)</view>
+    <view class="cell">
+      <input class="weui-input" name="mima" type="password" placeholder="注册密码" />
+    </view>
+  </view>
+  <view class='up'>
+    <!-- 轮播图上传 -->
+    <view class="weui-uploader">
+      <view class="weui-uploader__hd">
+        <view class="weui-uploader__title">轮播图(三张，长按删除)</view>
+        <view class="weui-uploader__info">{{files.length}}/3</view>
+      </view>
+      <view class="weui-uploader__bd">
+        <block wx:for="{{files}}" wx:key="*this">
+          <view class="weui-uploader__file" bindtap="previewImage" id="{{item}}">
+            <image class="weui-uploader__img" src="{{item}}" data-id="{{index}}" data-text="1" mode="aspectFill" bindlongpress="deleteImage"></image>
+          </view>
+        </block>
+        <block wx:if="{{ files.length < 3 }}">
+          <view class="weui-uploader__input-box">
+            <view class="weui-uploader__input" bindtap="chooseImage"></view>
+          </view>
+        </block>
+      </view>
+    </view>
+    <!-- 营业执照上传 -->
+    <view class="weui-uploader">
+      <view class="weui-uploader__hd">
+        <view class="weui-uploader__title">营业执照(必填)</view>
+        <view class="weui-uploader__info">{{one.length}}/1</view>
+      </view>
+      <view class="weui-uploader__bd">
+        <block wx:for="{{one}}" wx:key="*this">
+          <view class="weui-uploader__file" bindtap="business">
+            <image class="weui-uploader__img" src="{{item}}" data-id="{{index}}" data-text="2" mode="aspectFill" bindlongpress="deleteImage"></image>
+          </view>
+        </block>
+        <block wx:if="{{ one.length < 1 }}">
+          <view class="weui-uploader__input-box">
+            <view class="weui-uploader__input" bindtap="license"></view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+  <view class='up'>
+    <view class='weui-uploader__title' style='color:#333;'>
+        营业时间(必填)
+      </view>
+      <view class="section">
+        <picker mode="time" value="{{data}}" start="00:00" end="12:00" bindchange="bindDateChange">
+          <view class="picker">
+            早{{date}} ~
+          </view>
+        </picker>
+        <picker mode="time" value="{{time}}" start="12:00" end="24:00" bindchange="bindTimeChange">
+          <view class="picker">
+            晚{{time}}
+          </view>
+        </picker>
+      </view>
+    <view class='btn'>
+      <button type='button' formType="submit">立即提交</button>
+    </view>
+  </view>
+</form>
+
+<!--弹窗-->
+<view class="modal-mask" bindtap="hidetipsModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}">
+  <view class="modal-title" wx:if="{{files.length > 3}}">！轮播图数量超过限制</view>
+  <!-- <view class="modal-title" wx:if="{{one.length > 1}}">！营业执照数量超过限制</view> -->
+  <view class="modal-footer">
+    <view class="btn-confirm" bindtap="hidetipsModal" data-status="confirm">确定</view>
+  </view>
+</view>
+
+<!--弹窗-->
+<view class="modal-mask" bindtap="hideshibai" catchtouchmove="preventTouchMove" wx:if="{{shiabaitips}}"></view>
+<view class="modal-dialog" wx:if="{{shiabaitips}}">
+  <view class="modal-title">操作失败</view>
+  <view class="modal-footer">
+    <view class="btn-confirm" bindtap="hideshibai" data-status="confirm">确定</view>
+  </view>
+</view>
+
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">
+  <view class="drawer_title">部分功能需要获取您的地理信息，请点击授权</view>
+  <view class="drawer_content">
+    <button open-type="openSetting" bindopensetting="setadrr_btn" style='background:#00c355; color:#fff;width:95%'>授权</button>
+    <button bindtap='bindGetUserInfo' style='width:95%; margin-top: 10px'>取消</button>
+  </view>
+</view>

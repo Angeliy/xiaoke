@@ -1,0 +1,156 @@
+<swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">
+  <block wx:for="{{movies}}" wx:for-index="index" wx:key="key">
+    <swiper-item>
+      <image src="{{item.url}}" class="slide-image" mode="aspectFill" />
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class='container'>
+
+  <view class='title_yang'>
+    <view class='cc'>
+      <text class='p1'>￥59</text>
+      <view class='p2'>团购</view>
+    </view>
+    <view>
+      <text class='time'>2018/09/20截至</text>
+    </view>
+  </view>
+  <view class='jia'>
+    <text>原价 ￥99</text>
+    <text bindtap='onTuan' class='tuan'>我要发团</text>
+  </view>
+
+  <text class='p3'>冬季冬季冬季冬季冬季冬季冬季冬季冬季</text>
+
+  <view class='group'>
+    <view>
+      <image src='../../image/my.png' class='person'></image>
+      <image src='../../image/my.png' class='person'></image>
+    </view>
+    <view class='group-two'>
+      <view class='group_person'>
+        <text class='p4'>已拼145件</text>
+        <text class='p4'>.3人起拼</text>
+      </view>
+      <view class='share'>
+        <image src='/image/home.png'></image>
+        <text class='share_text'>分享</text>
+      </view>
+    </view>
+
+
+  </view>
+  <view class='gift'>赠品：团购客户得到（用户得到什么）</view>
+</view>
+
+<view class='xian'></view>
+<!-- 拼单 -->
+
+<view class='collage-person'>
+  <view class='howPerson'>23人在拼单,小伙伴们可直接参与哦</view>
+  <view class='more'>查看更多</view>
+</view>
+
+<view class='collage-container'>
+
+  <view class='collage-list'>
+    <view class='collage-item'>
+      <view class='collage-day'>
+        <image src='/image/footprint.jpg'></image>
+        <text>新的一天</text>
+      </view>
+      <view class='collage-btn'>
+      <view class='dateTime'>
+       <text>还差<text class='count'>2人</text>拼成</text>
+        <text>剩余23:48:31.2</text>
+      </view>
+       
+        <text class='go-collage'>去拼单</text>
+      </view>
+    </view>
+  </view>
+
+   <view class='collage-list'>
+    <view class='collage-item'>
+      <view class='collage-day'>
+        <image src='/image/footprint.jpg'></image>
+        <text>新的一天</text>
+      </view>
+      <view class='collage-btn'>
+      <view class='dateTime'>
+       <text>还差<text class='count'>2人</text>拼成</text>
+        <text>剩余23:48:31.2</text>
+      </view>
+       
+        <text class='go-collage'>去拼单</text>
+      </view>
+    </view>
+  </view>
+  
+</view>
+
+<view class="represent-container">
+  <text class='represen-titel'>为我代言的品牌</text>
+  <image src='/image/sw_1.png'></image>
+</view>
+<!-- 分界线 -->
+<view class='xian'></view>
+<!-- 商品描述 -->
+<view class='shoe-container'>
+  <text class='shoe-descr'>商品描述</text>
+  <view class='shop-list'>
+    <text class='shop-item'>全店满199减20，满399减40</text>
+    <text class='shop-item'>全店满199减20，满399减40</text>
+  </view>
+</view>
+<view class='shopDescrImag'>
+  <image src='/image/sw_1.png'></image>
+  <image src='/image/sw_1.png'></image>
+</view>
+<!-- 商品评价 -->
+
+<view class='assess-container'>
+  <view class='assess-one'>
+    <text class='shop-appraise'>商品评价（6）</text>
+    <text bindtap='viewAppraise'>查看全部评价</text>
+  </view>
+
+  <view class='assess-two'>
+    <view class='assess-start'>
+      <image src='/image/add.png'></image>
+      <view class='assess-person'>
+        <text>最近</text>
+        <image src='/image/use_sc2.png'></image>
+      </view>
+      <view class='date'>
+        <text class='assessDate'>2018-09-09</text>
+      </view>
+    </view>
+  </view>
+
+  <view class='assess-three'>
+    <text class='assess-shop'>商品好评!商品好评商品好评商品好评商品好评商品好评商品好评</text>
+    <text class='assess-protect'>项目：衣服</text>
+  </view>
+</view>
+
+<view class='xian'></view>
+
+<view class='footerCon'>
+    <view class='telCon'>
+        <text class="telTitle">联系方式</text>
+        <text class='tel'>18180463250</text>
+    </view>
+    <view class='buyMethods'>
+        <view class='onlyBuy'>
+            <view class='onPrice'>￥198</view>
+            <view class='onTitle'>单独购买</view>
+        </view>
+        <view class='togetter'>
+            <text class='toPrice'>￥99</text>
+            <text class='toTitle'>单独购买</text>
+        </view>
+    </view>
+</view>

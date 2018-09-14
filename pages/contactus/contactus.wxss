@@ -1,0 +1,20 @@
+page {
+  background: #f2f4f6;
+}
+
+.tor {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20rpx 0;
+}
+
+.tor:nth-child(1) {
+  border-bottom: 1px solid #eee;
+}
+
+.list {
+  background: #fff;
+  padding: 0 30rpx;
+  margin: 30rpx 0;
+}

@@ -1,0 +1,8 @@
+<view class='qr'>
+    <block wx:if="{{ url != '' }}">
+        <image class="ma" src="https://safe.wyxke.com/xk_mini/service/employer/getShopQRCode.do?token={{token}}" mode="widthFix"></image>
+    </block>
+    <block wx:else>
+        放二维码
+    </block>
+</view>

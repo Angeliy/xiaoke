@@ -1,0 +1,33 @@
+<view class='content'>
+
+  <view class='dian_box'>
+    <image src='../../image/dian.png'></image>
+    <view class='gg'>
+      <text class='p1'>秋季冬装秋秋季冬装秋秋季冬装秋秋季冬装秋</text>
+      <view class='cc'>
+        <text class='p2'>￥69</text>
+        <view class='p3'>
+          团购
+        </view>
+        <button class='btn' bindtap='cod'>立即抢</button>
+      </view>
+      <text class='p4'>已团: 5人</text>
+    </view>
+  </view>
+
+  <view class='dian_box'>
+    <image src='../../image/dian.png'></image>
+    <view class='gg'>
+      <text class='p1'>秋季冬装秋秋季冬装秋秋季冬装秋秋季冬装秋</text>
+      <view class='cc'>
+        <text class='p2'>￥69</text>
+        <view class='p3'>
+          团购
+        </view>
+        <button class='btn' bindtap='cod'>立即抢</button>
+      </view>
+      <text class='p4'>已团: 5人</text>
+    </view>
+  </view>
+
+</view>

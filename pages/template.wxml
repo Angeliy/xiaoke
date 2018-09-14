@@ -1,0 +1,60 @@
+<template name="footer_tmp">
+  <form bindsubmit="formSubmit" report-submit="true">
+    <view class='footer'>
+      <block wx:if="{{ route == 'shouye' }}">
+          <view class="footer_title footerActive}}">
+            <button  formType="submit"  hover-class="none" class='invisibleclass'>
+              <image src='../../image/home.png'></image>
+            </button>
+            <text style='font-size:26rpx'>首页</text>
+          </view>
+      </block>
+      <block wx:else>
+        <view bindtap="navigateTo" data-type="redirect" data-path="/pages/index/index">
+          <view class="footer_title footerActive}}">
+            <button  formType="submit"  hover-class="none" class='invisibleclass'>
+              <image src='../../image/home_1.png'></image>
+            </button>
+            <text style='font-size:26rpx'>首页</text>
+          </view>
+        </view>
+      </block>
+      <block wx:if="{{ route == 'jishi' }}">
+        <block wx:if="{{ route == 'jishi' }}">
+          <view class="footer_title footerActive}}">
+            <image src='../../image/my.png'></image>
+            <text style='font-size:26rpx'>预约</text>
+          </view>
+        </block>
+        <block wx:else>
+          <view bindtap="navigateTo" data-type="redirect" data-path="/pages/customer_user/customer_user">
+            <view class="footer_title footerActive}}">
+              <image src='../../image/my_1.png'></image>
+              <text style='font-size:26rpx'>预约</text>
+            </view>
+          </view>
+        </block>
+      </block>
+      <block wx:else>
+        <block wx:if="{{ route == 'geren' }}">
+          <view class="footer_title footerActive}}">
+            <button  formType="submit"  hover-class="none" class='invisibleclass'>
+              <image src='../../image/my.png'></image>
+            </button>
+            <text style='font-size:26rpx'>个人</text>
+          </view>
+        </block>
+        <block wx:else>
+          <view bindtap="navigateTo" data-type="redirect" data-path="/pages/customer_user/customer_user">
+            <view class="footer_title footerActive}}">
+              <button  formType="submit"  hover-class="none" class='invisibleclass'>
+                <image src='../../image/my_1.png'></image>
+              </button>
+              <text style='font-size:26rpx'>个人</text>
+            </view>
+          </view>
+        </block>
+      </block>
+    </view>
+    </form>
+</template>

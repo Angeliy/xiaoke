@@ -1,0 +1,14 @@
+<view class='list'>
+  <navigator class="tor"  hover-class="none">
+    <view class="weui-cell__bd">
+      <view>联系我们</view>
+    </view>
+    <view class="weui-cell__ft_in-access"></view>
+  </navigator>
+  <navigator class="tor"  hover-class="none">
+    <view class="weui-cell__bd">
+      <view>清除缓存</view>
+    </view>
+    <view class="weui-cell__ft_in-access"></view>
+  </navigator>
+</view>

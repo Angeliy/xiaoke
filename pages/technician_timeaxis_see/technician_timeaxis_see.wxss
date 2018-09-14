@@ -1,0 +1,83 @@
+page {
+  background-color: #fbf7ed;
+}
+
+.trip {
+  padding: 40rpx 30rpx 0;
+}
+
+.trip-wps {
+  margin-top: 36rpx;
+}
+
+.day .wp-sep {
+  background: #e7ddc6;
+  height: 36rpx;
+  margin-left: 20rpx;
+  width: 8rpx;
+}
+
+.day .day-marker {
+  color: #a8915e;
+  font-size: 35rpx;
+  font-weight: bold;
+  line-height: 36rpx;
+  padding-top: 5rpx;
+  height: 36rpx;
+}
+
+.day .circle {
+  display: inline-block;
+  width: 16rpx;
+  height: 16rpx;
+  background-color: #fff;
+  border-radius: 16rpx;
+  border: 8rpx solid #e7ddc6;
+  margin: 0 8rpx;
+  vertical-align: text-bottom;
+}
+
+.day-content .photo-ctn {
+  width: 100%;
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.day-content .photo-ctn image {
+  width: 225rpx;
+  height: 225rpx;
+  margin: 5rpx 0;
+}
+
+.day-content .text {
+  background-color: #fff;
+  padding: 10rpx 20rpx 0;
+  color: #5c5c5c;
+  word-break: break-word;
+}
+
+.day-content .wp-stats {
+  padding: 10rpx 18rpx 22rpx;
+  background-color: #fff;
+  overflow: hidden;
+  border-bottom: 6rpx solid #e7e7e7;
+}
+
+.day-content .wp-stats .wp-time {
+  font-size: 24rpx;
+  float: left;
+  color: #999;
+  height: 44rpx;
+  line-height: 44rpx;
+}
+
+.day-content .wp-stats .icon-time {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10rpx;
+  position: relative;
+  top: -2rpx;
+  width: 24rpx;
+  height: 24rpx;
+}

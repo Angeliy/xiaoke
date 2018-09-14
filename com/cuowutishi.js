@@ -1,0 +1,21 @@
+Component(
+{
+    options:
+    {
+        multipleSlots:true
+    },
+    data:
+    {
+        shiabaitips:true
+    },
+    methods:
+    {
+        //关闭提示窗口
+        hideshibai:function(){
+            this.setData(
+            {
+                shiabaitips:false
+            });
+        },
+    }
+})

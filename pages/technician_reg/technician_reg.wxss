@@ -1,0 +1,118 @@
+page {
+  background: #f2f4f6;
+}
+
+.conter {
+  padding: 20rpx 30rpx;
+  background: #fff;
+}
+
+.title {
+  font-size: 33rpx;
+  color: #333;
+}
+
+.title_2 {
+  display: flex;
+  align-items: center;
+  font-size: 33rpx;
+  color: #333;
+}
+
+.cell {
+  font-size: 25rpx;
+  color: #666;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 20rpx;
+}
+
+.up {
+  background: #fff;
+  margin-top: 20rpx;
+  padding: 20rpx;
+  font-size: 30rpx;
+}
+.project {
+ display: flex;
+ flex-direction: column;
+ margin-bottom: 150rpx;
+}
+.service {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 25rpx;
+  color: #666;
+  margin: 20rpx 0;
+  text-align: left;
+}
+
+.service text{
+  width: 280rpx;
+  height: 63rpx;
+  line-height: 60rpx;
+  background: #eee;
+  border: 1px solid #eee;
+  padding-left: 10rpx;
+  margin-right: 10rpx
+}
+
+.service input {
+  width: 280rpx;
+  font-size: 25rpx;
+  padding-left: 10rpx;
+  border: 1px solid #eee;
+  margin: 0 10rpx;
+}
+
+.btn button {
+  background: #ffc824;
+  border: 1px solid #333;
+  line-height: 65rpx;
+  height: 70rpx;
+  font-size: 30rpx;
+  margin: 80rpx 0 20rpx 0;
+}
+
+.phone_one {
+  border: 1px solid #eee;
+  height: 50rpx;
+  line-height: 50rpx;
+  width: 560rpx;
+  padding-left: 10rpx;
+  margin-left: 20rpx;
+  font-size: 28rpx;
+  color: #666;
+  position: relative;
+}
+
+.phone_one image{
+  position: absolute;
+  width: 50rpx;
+  height: 50rpx;
+  top: 0;
+  left: 500rpx;
+}
+
+.person_box {
+  position: relative;
+}
+
+.phone_select {
+  z-index: 100;
+  position: absolute;
+  left: -589rpx;
+  top: 25rpx;
+}
+
+.select_one {
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #eee;
+  width: 550rpx;
+  padding: 10rpx;
+  margin-left: 20rpx;
+  font-size: 28rpx;
+  color: #666;
+}

@@ -1,0 +1,21 @@
+<view class='uploader'>
+  <view class="weui-uploader">
+    <view class="weui-uploader__hd">
+      <view class="weui-uploader__title">上传图库(长按删除)</view>
+      <view class="weui-uploader__info">{{files.length}}/99</view>
+    </view>
+    <view class="weui-uploader__bd">
+      <block wx:for="{{files}}" wx:key="*this">
+        <view class="weui-uploader__file" bindtap="previewImage">
+          <image class="weui-uploader__img" src="{{item}}" data-id="{{index}}" id="{{time}}" mode="aspectFill" bindlongpress="deleteImage"/>
+        </view>
+      </block>
+      <view class="weui-uploader__input-box" wx:if="{{files.length < 3}}">
+        <view class="weui-uploader__input" bindtap="chooseImage"></view>
+      </view>
+    </view>
+  </view>
+  <view class='btn'>
+    <button type='button' bindtap="shangchuang">确认上传</button>
+  </view>
+</view>

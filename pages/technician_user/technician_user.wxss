@@ -1,0 +1,74 @@
+page {
+  background: #f2f4f6;
+}
+
+.content {
+  background: #fff;
+  margin-bottom: 30rpx;
+}
+
+.content image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+  vertical-align: middle;
+}
+
+.list text {
+  font-size: 28rpx;
+  color: #666;
+}
+
+.user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30rpx;
+}
+
+.user_a {
+  display: flex;
+  align-items: center;
+}
+
+.edit {
+  display: flex;
+}
+
+.edit text {
+  color: #666;
+  font-size: 32rpx;
+}
+
+.user_a image {
+  width: 130rpx;
+  height: 130rpx;
+}
+
+.tor {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20rpx 30rpx;
+  margin: 0 22rpx;
+}
+
+.list .tor:nth-child(1) {
+  border-bottom: 1px solid #eee;
+}
+
+.list .tor:nth-child(2) {
+  border-bottom: 1px solid #eee;
+}
+
+.list .tor:nth-child(3) {
+  border-bottom: 1px solid #eee;
+}
+
+.list .tor:nth-child(4) {
+  border-bottom: 1px solid #eee;
+}
+.contact {
+  margin-bottom: 150rpx;
+}

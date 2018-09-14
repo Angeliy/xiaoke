@@ -1,0 +1,85 @@
+
+.mainContainer {
+  height: 100%;
+  
+  font-size: 26rpx;
+
+}
+.distance {
+  margin: 10rpx 30rpx;
+}
+.appContainer {
+ padding:6rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx solid gainsboro;
+  border-top: 1rpx solid gainsboro;
+}
+.titleStyle {
+  padding: 5rpx 8rpx;
+  border-radius: 6rpx;
+  color: white;
+}
+.appraiseAll {
+  
+  background: rgba(255, 0, 0, 0.541);
+}
+.well {
+  background: orange;
+}
+.bad {
+  background: gainsboro;
+  color:black;
+}
+.appraiseItem .image1{
+  width: 28rpx;
+  height: 32rpx;
+}
+.appraiseItem .image2{
+  width: 32rpx;
+  height: 28rpx;
+}
+.appraiseItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 23rpx;
+  
+}
+.itemLeft {
+  display: flex;
+  flex-direction: column;
+  
+}
+.itemDate {
+  font-size: 18rpx;
+  color: rgb(95, 94, 94);
+}
+.itemPerson {
+  display: flex;
+  flex-direction: row;
+  padding: 12rpx 0rpx;
+  align-items: center;
+  justify-content: space-between;
+}
+.itemPerson .itemTitle {
+  margin-left: 15rpx;
+}
+.itemType {
+  font-size: 18rpx;
+  color: rgb(95, 94, 94);
+  padding-top: 6rpx ;
+}
+.kind {
+  margin-left: 10rpx;
+}
+.imgCon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.itemType {
+  border-bottom: 5rpx solid gainsboro;
+}

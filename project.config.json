@@ -1,0 +1,184 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.2.2",
+	"appid": "wxc8bb7f0161bd3360",
+	"projectname": "newfensi",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 23,
+			"list": [
+				{
+					"id": 0,
+					"name": "店主注册",
+					"pathName": "pages/store_reg/store_reg",
+					"query": ""
+				},
+				{
+					"id": 1,
+					"name": "首页信息",
+					"pathName": "pages/index/index",
+					"query": "shopid=13"
+				},
+				{
+					"id": -1,
+					"name": "技师注册",
+					"pathName": "pages/customer_reg/customer_reg",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "项目管理",
+					"pathName": "pages/store_project/store_project",
+					"query": "shopid=10"
+				},
+				{
+					"id": -1,
+					"name": "店主首页",
+					"pathName": "pages/store_user/store_user",
+					"query": "shopid=13"
+				},
+				{
+					"id": -1,
+					"name": "我的员工",
+					"pathName": "pages/store_staff/store_staff",
+					"query": "shopid=13"
+				},
+				{
+					"id": -1,
+					"name": "查看关注顾客",
+					"pathName": "pages/store_follow/store_follow",
+					"query": "shopid=13"
+				},
+				{
+					"id": -1,
+					"name": "预约的订单",
+					"pathName": "pages/store_line/store_line",
+					"query": "shopid=13"
+				},
+				{
+					"id": -1,
+					"name": "店主的我的消息",
+					"pathName": "pages/store_discount/store_discount",
+					"query": "shopid=13"
+				},
+				{
+					"id": -1,
+					"name": "雇员主页",
+					"pathName": "pages/technician_user/technician_user",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "店主拓客",
+					"pathName": "pages/store_toker/store_toker",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "忘记秘密",
+					"pathName": "pages/forget/forget",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "店铺编辑",
+					"pathName": "pages/store_reg_udp/store_reg",
+					"query": "shopid=13"
+				},
+				{
+					"id": -1,
+					"name": "雇员的作品页",
+					"pathName": "pages/technician_timeaxis/technician_timeaxis",
+					"query": "shopid=13"
+				},
+				{
+					"id": -1,
+					"name": "用户浏览雇员的作品页",
+					"pathName": "pages/technician_timeaxis_see/technician_timeaxis_see",
+					"query": "shopid=13"
+				},
+				{
+					"id": -1,
+					"name": "技师的预约接口",
+					"pathName": "pages/details/details",
+					"query": "guyuanId=16"
+				},
+				{
+					"id": -1,
+					"name": "店主的项目管理",
+					"pathName": "pages/store_project/store_project",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "雇员上传作品",
+					"pathName": "pages/technician_uploader/technician_uploader",
+					"query": ""
+				},
+				{
+					"id": 17,
+					"name": "预约详情",
+					"pathName": "pages/details/details",
+					"query": "guyuanId=48"
+				},
+				{
+					"id": -1,
+					"name": "店主",
+					"pathName": "pages/store_line/store_line",
+					"query": "shopid=13"
+				},
+				{
+					"id": -1,
+					"name": "团购列表",
+					"pathName": "pages/commodity_list/commodity_list",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "团购商品详情",
+					"pathName": "pages/commodity/commodity",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "评价列表",
+					"pathName": "pages/appraise/appraise",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "测试",
+					"pathName": "pages/text/text"
+				}
+			]
+		}
+	}
+}

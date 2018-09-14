@@ -1,0 +1,25 @@
+<view class="trip">
+  <view class="trip-bottom">
+    <button type='button' bindtap='uploader'>添加作品+</button>
+  </view>
+  <view class="trip-wps">
+    <view class="day-marker">
+      <text class="circle"></text>
+      <text class='an'>长按删除</text>
+    </view>
+    <view class="day">
+
+      <view class="day-content">
+        <view class="waypoint">
+          <view class="photo-ctn">
+            <block wx:for='{{imagurl}}' wx:for-item="img">
+              <image src="{{img.url}}" bindlongpress="deleteImage" bindtap='previewImg' data-text="{{index}}" data-index="{{img.id}}"></image>
+            </block>
+          </view>
+
+        </view>
+
+      </view>
+    </view>
+  </view>
+</view>

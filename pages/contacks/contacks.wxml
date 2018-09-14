@@ -1,0 +1,6 @@
+<view class='qr'>
+  <image class="ma" src="../../image/code2.png" mode="widthFix"></image>
+</view>
+<view style='margin-top: 40rpx;color:#666;font-size:36rpx;'>
+  联系我们，请关注公众号客服随时为您解答
+</view>

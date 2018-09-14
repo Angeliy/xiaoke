@@ -1,0 +1,75 @@
+page {
+  background: #f2f4f6;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  margin: 30rpx 0;
+  padding: 20rpx;
+  background: #fff;
+  justify-content: center;
+  align-items: center;
+}
+
+.dian_box {
+  display: flex;
+  border-bottom: 1px solid #eee;
+  padding: 20rpx 0;
+}
+
+.dian_box image {
+  width: 160rpx;
+  height: 160rpx;
+  margin-right: 30rpx;
+}
+
+.cc {
+  display: flex;
+  align-items: center;
+}
+
+.p1 {
+  width: 500rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 35rpx;
+  color: #333;
+}
+
+.p2 {
+  color: red;
+  margin-right: 20rpx;
+}
+
+.p3 {
+  width: 65rpx;
+  height: 40rpx;
+  background: #ffc824;
+  color: #fff;
+  font-size: 25rpx;
+  line-height: 40rpx;
+  text-align: center;
+  margin-right: 168rpx;
+}
+
+.p4 {
+  font-size: 26rpx;
+  color: #666;
+}
+
+.dian_box .btn {
+  font-size: 28rpx;
+  width: 150rpx;
+  height: 55rpx;
+  line-height: 55rpx;
+  background: #f7d856;
+  border-radius: 13rpx;
+  border: 1px solid #333;
+}
+
+.gg {
+  display: flex;
+  flex-direction: column;
+}

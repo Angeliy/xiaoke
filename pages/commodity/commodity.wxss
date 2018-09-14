@@ -1,0 +1,370 @@
+.xian {
+  background: #f2f4f6;
+  width: 100%;
+  height: 20rpx;
+}
+
+.swiper {
+  
+  height: 400rpx;
+  width: 100%;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 20rpx 30rpx;
+  height: 100%;
+}
+
+.title_yang {
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cc {
+  display: flex;
+  align-items: center;
+}
+
+.p1 {
+  color: red;
+  margin-right: 20rpx;
+  font-size: 40rpx;
+}
+
+.p2 {
+  width: 65rpx;
+  height: 40rpx;
+  background: #ffc824;
+  color: #fff;
+  font-size: 25rpx;
+  line-height: 40rpx;
+  text-align: center;
+}
+
+.time {
+  padding: 5rpx 5rpx;
+  font-size: 28rpx;
+  color: #ffc824;
+  position: relative;
+  right: 0rpx;
+  top: 0rpx;
+}
+.tuan {
+  padding: 2rpx ;
+  color:white;
+  background:red;
+  border-radius: 6rpx;
+}
+
+.jia {
+  display: flex;
+  flex-direction: row;
+  font-size: 26rpx;
+  color: #888;
+  height: 60rpx;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.p3 {
+  width: 700rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 35rpx;
+  color: #333;
+  margin: 10rpx 0;
+}
+
+.p4 {
+  font-size: 26rpx;
+  color: #666;
+  margin-right: 10rpx;
+  line-height: 26rpx;
+}
+
+.group {
+  display: inline-flex;
+  flex-direction: row;
+  height: 70rpx;
+  justify-content: space-between;
+  align-items: center;
+ 
+}
+.group-two {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.share {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15rpx;
+  margin-top:15rpx;
+
+}
+.share image {
+  
+  width: 32rpx;
+  height: 28rpx;
+
+
+}
+
+.share_text {
+  font-size: 16rpx;
+
+}
+.person {
+  width: 32rpx;
+  height: 28rpx;
+  
+}
+
+.gift {
+  font-size: 18rpx;
+  height: 60rpx;
+  color: rgb(82, 72, 72);
+  border-top: 1rpx solid #888;
+  line-height: 60rpx;
+}
+/* 拼单 */
+.collage-container {
+
+  margin: 20rpx 30rpx;
+  color: rgb(54, 51, 51);
+  font-size: 26rpx;
+  display: flex;
+  flex-direction: column;
+}
+.collage-person {
+  display: flex;
+  height: 40rpx;
+  font-size: 28rpx;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20rpx 30rpx;
+  align-items: center;
+  padding: 2rpx 0;
+}
+.more {
+  font-size: 22rpx;
+  color: rgb(95, 94, 94);
+}
+.howPerson {
+  font-size: 26rpx;
+}
+.collage-list {
+  display: flex;
+  flex-direction: column;
+}
+.collage-item {
+
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: 1rpx solid rgb(171, 171, 173);
+  height: 100rpx;
+  align-items: center;
+}
+.collage-day {
+  display: inline-flex;
+  flex-direction: row;
+  font-size: 22rpx;
+
+}
+.dateTime {
+  display: flex;
+  flex-direction: column;
+  padding-right:  15rpx;
+  font-size: 20rpx;
+  
+}
+.collage-day image {
+  width: 36rpx;
+  height: 32rpx;
+  margin: 5rpx 5rpx 0 0 ;
+}
+.collage-btn {
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+
+}
+.go-collage {
+  margin-left: 12rpx;
+  font-size: 20rpx;
+  color: white;
+  background: red;
+  padding: 3rpx 6rpx;
+  border-radius: 6rpx;
+}
+.count {
+  color: red;
+}
+/* 为我代言 */
+.represent-container {
+  margin: 20rpx 10rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.represen-titel {
+  font-size:29rpx;
+color:#333
+}
+.represent-container image {
+  height: 200rpx;
+}
+
+/* 商品描述 */
+.shoe-container {
+  margin: 10rpx 30rpx;
+  display: flex;
+  flex-direction: column;
+}
+.shoe-descr {
+  font-size: 26rpx;
+}
+.shop-list {
+  display:flex;
+  flex-direction: column
+}
+.shop-item {
+  font-size: 22rpx;
+  color: rgb(104, 102, 102);
+  padding: 8rpx 0;
+}
+
+/* 商品描述图片 */
+.shopDescrImag image {
+  width: 100%;
+  height: 220rpx;
+}
+/* 商品评价 */
+.assess-container {
+  display: flex;
+  flex-direction: column;
+  margin: 10rpx 30rpx;
+  flex: row;
+  font-size: 26rpx;
+  color: rgb(116, 112, 112);
+  margin-bottom: 150rpx;
+}
+.assess-one {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 22rpx;
+  color: rgba(14, 13, 13, 0.733);
+}
+.shop-appraise {
+  font-size: 26rpx;
+  color: rgb(14, 13, 13);
+}
+.assess-two {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 4rpx 0;
+  align-items: center;
+
+}
+
+.assess-start {
+   display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.date {
+  position: absolute;
+  right: 30rpx;
+ 
+}
+.assess-start image {
+  width: 32rpx;
+  height: 28rpx;
+}
+.assess-person {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10rpx;
+  font-size: 18rpx;
+}
+
+.assess-three {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.assess-shop {
+  color: rgb(37, 37, 37);
+}
+.assess-protect {
+  font-size: 18rpx;
+}
+
+/* 底部 */
+.footerCon {
+  position: fixed;
+  width:100%;
+  height: 100rpx;
+  background: white;
+  z-index: 99;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 24rpx;
+  align-items: center;
+}
+.telCon {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30rpx;
+ 
+}
+.tel {
+  padding: 6rpx 0rpx;
+}
+.buyMethods {
+  display: flex;
+  height: 40rpx;
+  flex-direction: row;
+  align-items: center;
+  color: white;
+ 
+ 
+}
+.onlyBuy {
+  border-radius: 6rpx;
+  padding: 10rpx 22rpx;
+  width: 140rpx;
+  height: 80rpx;
+  display: inline-flex;
+  flex-direction: column;
+  background: rgba(255, 0, 13, 0.322);
+  align-items: center;
+  color: white;
+}
+.togetter {
+  border-radius: 6rpx;
+  width: 140rpx;
+  height: 80rpx;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 0, 0, 0.747);
+  align-items: center;
+  padding: 10rpx 22rpx;
+}

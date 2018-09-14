@@ -1,0 +1,4 @@
+<view style="width: 100%; height: 100%;">
+  <map id="map" longitude="{{longitude}}" latitude="{{longitude}}" markers="{{markers}}" scale="18" style="width: 100%; height: 2000rpx" bindtap="click">
+  </map>
+</view>

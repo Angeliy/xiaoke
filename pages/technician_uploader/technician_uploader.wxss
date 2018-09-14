@@ -1,0 +1,12 @@
+.uploader{
+  padding: 30rpx;
+}
+
+.btn button {
+  background: #ffc824;
+  border: 1px solid #333;
+  line-height: 65rpx;
+  height: 70rpx;
+  font-size: 30rpx;
+  margin: 80rpx 0 20rpx 0;
+}

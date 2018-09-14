@@ -1,0 +1,41 @@
+<view class='signin'>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="title">手机账号登录</view>
+    <view class='cont'>
+      <view class="weui-cell">
+        <view style="width: 100rpx">
+          <picker bindchange="bindCountryCodeChange" value="{{countryCodeIndex}}" range="{{countryCodes}}">
+            <view class="weui-cell__ft_in-access">{{countryCodes[countryCodeIndex]}}</view>
+          </picker>
+        </view>
+        <view>
+          <input class="weui-input" type="number" name="userzhanghao" placeholder="请输入账号" />
+        </view>
+      </view>
+    </view>
+    <view class='cont'>
+      <view class="weui-cell">
+        <view style="width: 100rpx">
+          密码：
+        </view>
+        <view>
+          <input class="weui-input" type="password" name="usermima" placeholder="请输入密码" />
+        </view>
+      </view>
+    </view>
+    <view class='text'>
+      <text bindtap='forget'>忘记密码</text>
+    </view>
+    <view class='btn'>
+      <button type='button' formType="submit">登录</button>
+    </view>
+  </form>
+</view>
+<!--弹窗-->
+<view class="modal-mask" bindtap="hideshibai" catchtouchmove="preventTouchMove" wx:if="{{shiabaitips}}"></view>
+<view class="modal-dialog" wx:if="{{shiabaitips}}">
+  <view class="modal-title">{{chaozuotips}}</view>
+  <view class="modal-footer">
+    <view class="btn-confirm" bindtap="hideshibai" data-status="confirm">确定</view>
+  </view>
+</view>

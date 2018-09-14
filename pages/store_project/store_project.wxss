@@ -1,0 +1,177 @@
+page {
+  background: #f2f4f6;
+  height: 100%;
+}
+
+.content_box {
+  position: relative;
+}
+
+.hua{
+  color: red;
+  font-size: 35rpx;
+  margin: 10rpx 30rpx;
+}
+
+.view_ce {
+  width: 100%;
+  height: 80rpx;
+  position: relative;
+  padding-top: 20rpx;
+  padding-bottom: 30rpx;
+}
+
+.content_box_center {
+  width: 100%;
+  padding: 30rpx;
+  height: 120rpx;
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+.ProductIco_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.delete_btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 32rpx;
+  background: #ff3b30;
+  width: 134rpx;
+  height: 120rpx;
+  text-align: center;
+  line-height: 120rpx;
+  color: #fff;
+  z-index: 1;
+}
+
+.num {
+  width: 78rpx;
+  height: 78rpx;
+  background: #ffc824;
+  text-align: center;
+  line-height: 75rpx;
+  margin-right: 20rpx;
+}
+
+.til {
+  flex: 2.5;
+}
+
+.til text {
+  display: block;
+  font-size: 30rpx;
+  color: #333;
+}
+
+.til text:nth-child(2) {
+  font-size: 22rpx;
+  display: block;
+  color: #666;
+}
+
+.trip-bottom button {
+  position: fixed;
+  bottom: 0;
+  width: 260rpx;
+  height: 90rpx;
+  line-height: 88rpx;
+  border: 1px solid #ffc824;
+  background: #ffc824;
+  border-radius: 50rpx;
+  z-index: 999;
+  color: #fff;
+  right: 0;
+  font-size: 35rpx;
+  margin: 50rpx;
+  box-shadow: 1px 1px 10px #666;
+}
+
+.content {
+  background: #fff;
+  margin-top: 20rpx;
+  padding: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cell {
+  font-size: 25rpx;
+  color: #666;
+  padding-left: 10rpx;
+  border: 1px solid #eee;
+  width: 230rpx;
+  border-radius: 8rpx;
+  margin: 0 25rpx 0 80rpx;
+}
+
+.btn button {
+  width: 120rpx;
+  height: 65rpx;
+  background: #fff;
+  line-height: 62rpx;
+  border: 1px solid #ffc824;
+  font-size: 25rpx;
+  color: #333;
+}
+
+/**
+ * 提示窗口
+ */
+
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9000;
+  color: #fff;
+}
+
+.modal-dialog {
+  padding-top: 50rpx;
+  width: 540rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  z-index: 9999;
+  background: #f9f9f9;
+  margin: -180rpx 105rpx;
+  border-radius: 36rpx;
+}
+
+.modal-title {
+  font-size: 36rpx;
+  color: #030303;
+  text-align: center;
+}
+
+.modal-footer {
+  margin-top: 50rpx;
+  display: flex;
+  flex-direction: row;
+  height: 86rpx;
+  border-top: 1px solid #dedede;
+  font-size: 34rpx;
+  line-height: 86rpx;
+}
+
+.btn-confirm {
+  width: 100%;
+  color: #ec5300;
+  text-align: center;
+}

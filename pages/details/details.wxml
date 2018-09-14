@@ -1,0 +1,116 @@
+<form bindsubmit="order" bindreset="formReset" report-submit='true'>
+  <view class='container'>
+    <view class='content'>
+      <view class='title'>
+        <view>
+          <text>{{info.name}}</text>
+        </view>
+        <view class='share'>
+          <text>关注量：{{guanzhudu}}</text>
+        </view>
+      </view>
+      <view class='stylist'>
+        <view class='stylist_photo'>
+          <image src='{{info.head}}'></image>
+        </view>
+        <view class='stylist_text'>
+          <view class='stylist_title'>
+            <text class='p'>{{info.position}}</text>
+            <text>{{info.workingTime}}年</text>
+            <text>接单量:{{dingdanshu}}单</text>
+          </view>
+          <view class='star'>
+            <text>星级</text>
+            <block wx:for="{{5}}">
+              <image src='../../image/use_sc2.png'></image>
+            </block>
+            <block wx:for="{{5 - 5}}">
+              <image src='../../image/use_sc.png'></image>
+            </block>
+          </view>
+          <view class='score'>
+            <text>态度:{{info.attitude}}</text>
+            <text>效果:{{info.effect}}</text>
+            <text>形象:{{info.figure}}</text>
+          </view>
+        </view>
+      </view>
+      <view class='good'>
+        <text>擅长:</text>
+        <text>{{info.skills}}</text>
+      </view>
+      <view class='good'>
+        <text>个人简介:</text>
+        <text>{{info.introduce}}</text>
+      </view>
+    </view>
+    <view class='content'>
+      <navigator url='../index/index' hover-class="none">
+        <view class='text tt'>
+          <text>—— {{shopname}} ——</text>
+        </view>
+      </navigator>
+      <view class='service'>
+        <text>类别(仅供参考)</text>
+        <view class='check'>
+          <view class="label-1" wx:for="{{projects}}">
+            <view class="clickview" data-text="{{index}}" bindtap="xuanzhong">
+              <view class="label-1__icon">
+                <view class="label-1__icon-checked" style="opacity:{{checkboxItems[index].checked ? 1: 0}}" data-text="{{index}}">
+                </view>
+              </view>
+              {{item.project.projectName}} > {{item.projectPrice}}元 抵用券({{item.couponNum}}元)
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='service'>
+        <text>到达时间选择:</text>
+      </view>
+      <view class='time'>
+        <view class="section">
+          <picker mode="multiSelector" value="{{dateTime1}}" bindchange="changeDateTime1" bindcolumnchange="changeDateTimeColumn1" range="{{dateTimeArray1}}">
+            <view class="picker">
+              {{dateTimeArray1[0][dateTime1[0]]}}年{{dateTimeArray1[1][dateTime1[1]]}}月{{dateTimeArray1[2][dateTime1[2]]}}日 {{dateTimeArray1[3][dateTime1[3]]}}:{{dateTimeArray1[4][dateTime1[4]]}}
+            </view>
+          </picker>
+        </view>
+      </view>
+    </view>
+    <view class='content'>
+      <view class='text'>
+        <text>—— 本店图库 ——</text>
+        <navigator url='../technician_timeaxis_see/technician_timeaxis_see?userID={{jishiid}}' hover-class="none">
+        <view class='text tt'>
+          <text class="see_more"> ☞  查看更多  ☜ </text>
+        </view>
+      </navigator>
+      </view>
+      <view class='works'>
+        <image src="{{item}}" bindlongpress="deleteImage" bindtap='previewImg' data-index="{{index}}" wx:for='{{works}}'></image>
+      </view>
+      <!--<view class="customerPhone">
+      预约人电话:{{customerPhone}}
+      </view> -->
+    </view>
+    <view class='btn'>
+      <button form-type='submit' wx:if="{{showshouji == 0 || showshouji == null}}" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">立即预约</button>
+      <button wx:else form-type="submit">立即预约</button>
+    </view>
+  </view>
+</form>
+<view style="height: 50px;"></view>
+<import src="../template.wxml"/>
+<template is="footer_tmp" data="{{route : 'jishi'}}"/>
+
+<!-- 获取用户信息的按钮授权 -->
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">
+  <view class='shou'>
+    <image src='../../image/ph.png'></image>
+  </view>
+  <view class="drawer_title">· 部分功能需要获取您的公开信息，请点击授权</view>
+  <view class="drawer_content">
+    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='shouquan'>授权</button>
+    <!-- <button bindtap='bindGetUserInfo' style='width:95%; margin-top: 10px'>取消</button> -->
+  </view>
+</view>
